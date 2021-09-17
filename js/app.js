@@ -41,6 +41,7 @@ d.addEventListener("DOMContentLoaded", () => {
 
     /* INICIALIZAMOS A LA CARGA DEL DOM  */
 
+    slider.style.background = `linear-gradient(90deg, hsl(174, 86%, 45%) ${slider.value}%, hsl(174, 77%, 80%) ${slider.value}%)`;
     amount.textContent = `$${data[slider.value / 25].p}.00`;
     viewers.textContent = `${data[slider.value / 25].q}`;
 
