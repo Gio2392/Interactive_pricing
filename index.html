@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+  
+</head>
+<body>
+  <header>
+    <h1 class="title">Simple, traffic-based pricing</h1>
+    <p class="subtitle">Sign-up for our 30-day trial. No credit card required. </p>
+  </header>
+  <main>
+    <section class="view">
+      <h3 class="view__text"></h3>
+    </section>
+
+    <!-- *SLIDER -->
+    <div class="container">
+      <input type="range" min="0" max="100" value="0" class="slider" step="25">
+    </div>
+
+    <!-- *PRICE -->
+    <section class="price">
+      <p class="price__amount"></p>
+      <span class="price__time">/month</span>
+    </section>
+
+    <!-- *PROMOTION -->
+    <section class="promotion">
+      <p class="promotion__text">Monthly Billing</p>
+      
+      <label class="promotion__active">
+        <input type="checkbox" id="check">
+        <span class="toggle"></span>
+      </label>
+
+      <p class="promotion__text">Yearly Billing <span class="change__text">25%&nbsp;discount</span> </p>
+    </section>
+    <section class="features">
+      <div class="feature">
+        <img src="./images/icon-check.svg" alt="check img">
+        <p>Unlimited websites</p>
+      </div>
+      <div class="feature">
+        <img src="./images/icon-check.svg" alt="check img">
+        <p>100% data ownership</p>
+      </div>
+      <div class="feature">
+        <img src="./images/icon-check.svg" alt="check img">
+        <p>Email reports</p>
+      </div>
+    </section>
+    <section class="cta">
+      <button class="btn">Start my trial</button>
+    </section>
+
+  </main>
+
+
+ <!--  
+  
+
+   -->
+  
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
