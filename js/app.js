@@ -31,14 +31,16 @@ const data = [
 d.addEventListener("DOMContentLoaded", () => {
 
     /* MEDIO QUERY PARA EL DESCUENTO */
-    w.addEventListener("resize", () => {
-        if (screen.width < 768) {
-            d.querySelector(".change__text").textContent = "-25%";
-        } else {
+    const mediaQ = matchMedia('(min-width: 768px)');
+    function changeD(e) {
+        if(e.matches){
             d.querySelector(".change__text").textContent = "25% discount";
+        }else{
+            d.querySelector(".change__text").textContent = "-25%";
         }
-    });
-
+    }
+    mediaQ.addEventListener('change', changeD);
+    changeD(mediaQ);
     /* INICIALIZAMOS A LA CARGA DEL DOM  */
 
     slider.style.background = `linear-gradient(90deg, hsl(174, 86%, 45%) ${slider.value}%, hsl(174, 77%, 80%) ${slider.value}%)`;
